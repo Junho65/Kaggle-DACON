@@ -1,23 +1,39 @@
 null value가 많지 않아 impute 적용
 Age : 30대 초반이 가장 많으며, normal distribution
-TypeOfContact : Self Enquiry가 약 70% 차지, CompanyInvited가 30%
+TypeofContact : 
+    Self Enquiry가 약 70% 차지, CompanyInvited가 30%
+    null value 시, 최빈값으로 대체
 CityTier : 1 Tier 65%, 3 Tier 30%, 2Tier 5%
-DurationOfPitch : 고객 프레젠테이션 기간 : 대부분 15 이내로
+DurationOfPitch : 고객 프레젠테이션 기간 
+    대부분 15 이내로
+    null value는 median 으로 대체
 Occupation : 월급 50%, 자영업 42%, 기업가 8%, 이외 프리랜서
 Gender : text column, 남성이 62%, Fe Male로 레이블에 오류가 있다
-NumberOfPersonVisiting : 여행인원, 거의 2명~4명 사이, 3명이 가장 많음, 정규분포로 보임
-NumberOfFollowups : 뭔진 모르겠으나, 3~5 사이 대부분 분포하고 있고, 정규분포로 보임
-ProductPitched : text column, Basic 38%, Deluxe 35%, Standard 15%, Super Deluxe 7%, King 4%
-PreferredPropertyStar : ordinal number column, 선호 호텔 숙박업소 등급, 3 star 62%, 5 star 19%, 4 star 18%
+NumberOfPersonVisiting : 여행인원, 
+    거의 2명~4명 사이, 3명이 가장 많음, 정규분포로 보임
+NumberOfFollowups : 
+    뭔진 모르겠으나, 3~5 사이 대부분 분포하고 있고, 정규분포로 보임
+    null value는 median으로 대체
+ProductPitched : text column, 
+    Basic 38%, Deluxe 35%, Standard 15%, Super Deluxe 7%, King 4%
+PreferredPropertyStar : 
+    ordinal num column,
+    선호 호텔 숙박업소 등급, 3 star 62%, 5 star 19%, 4 star 18%
 MaritalStatus : Married 48%, Divorced 19%, Single 18%, Unmarried 14%
-NumberOfTrips : 평균 연간 여행 횟수
+NumberOfTrips : 
+    ratio var, 평균 연간 여행 횟수
+    0은 없는 것으로 보아 null value는 0으로 대체
 Passport : dummy var, 의외로 없는 사람이 70% 였다
-PitchSatisfactionScore : ordinal number var, ProdTaken과 상관관계를 조사할 필요가 있다.
+PitchSatisfactionScore : ordinal number var, 
+    ProdTaken과 상관관계를 조사할 필요가 있다.
 OwnCar : dummy var, 소유 62%
-NumberOfChildrenVisiting : ordinal num var, 1명 42%, 2명 28%, 0명 21%
+NumberOfChildrenVisiting : ratio var, 1명 42%, 2명 28%, 0명 21%, 
+    0명은 없는 것으로 보아 null value는 0으로 대체해야
 Designation : Executive         0.381074
-Manager           0.352430
-Senior Manager    0.154476
-AVP               0.066496
-VP                0.045524
-MonthlyIncome : 숫자가 매우 커서, 로그스케일링이 필요하다
+    Manager           0.352430
+    Senior Manager    0.154476
+    AVP               0.066496
+    VP                0.045524
+MonthlyIncome : 숫자가 매우 커서, 로그스케일링이 필요하다, outlier도 제거해야 할 것 같다. 
+    우선은 median 값으로 imputing 하되,
+    Age와 상관관계가 높으므로 내삽을 시도할 수 있다.
