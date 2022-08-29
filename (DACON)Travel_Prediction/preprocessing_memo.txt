@@ -9,6 +9,7 @@ DurationOfPitch : 고객 프레젠테이션 기간
     null value는 median 으로 대체
 Occupation : 월급 50%, 자영업 42%, 기업가 8%, 이외 프리랜서
 Gender : text column, 남성이 62%, Fe Male로 레이블에 오류가 있다
+    label encoder 필요
 NumberOfPersonVisiting : 여행인원, 
     거의 2명~4명 사이, 3명이 가장 많음, 정규분포로 보임
 NumberOfFollowups : 
@@ -37,3 +38,11 @@ Designation : Executive         0.381074
 MonthlyIncome : 숫자가 매우 커서, 로그스케일링이 필요하다, outlier도 제거해야 할 것 같다. 
     우선은 median 값으로 imputing 하되,
     Age와 상관관계가 높으므로 내삽을 시도할 수 있다.
+
+ProdTaken : 레이블 값,
+    0이 80%, 1이 20% 정도로 좀 불균형하다.
+    샘플을 더 증식시켜야하는 건가?
+    잘 판단이 서지 않는다
+
+
+이번에 dtypes 체크를 제대로 못했다
