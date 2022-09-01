@@ -46,3 +46,4 @@ ProdTaken : 레이블 값,
 
 
 이번에 dtypes 체크를 제대로 못했다
+pairplot 통해서 범주형 변수를 더 잘 분석했었어야
