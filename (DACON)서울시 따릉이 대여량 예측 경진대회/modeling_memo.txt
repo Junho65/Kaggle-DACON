@@ -1,0 +1,38 @@
+
+
+
+windspeed : skewed to the right
+visibility : 이상하게 오른쪽 꼬리쪽에 집중적으로 분포
+--> visibility를 구간화
+
+
+
+
+median imputation,
+=========================================
+#linear reg
+train set RMSE : 52.89708317710953
+valid set RMSE : 52.72432223240654
+
+#random forest reg (estimators 100)
+train set RMSE : 39.70745050047186
+valid set RMSE : 44.117764144561285
+
+#random forest reg (estimators 500)
+train set RMSE : 39.26
+valid set RMSE : 43.5
+
+#random search cv, random forest
+{'n_estimators': 733,
+ 'min_samples_split': 2,
+ 'min_samples_leaf': 1,
+ 'max_depth': 56,
+ 'bootstrap': True}
+ 
+train set RMSE : 39.43
+valid set RMSE : 43.55
+dacon score : 44.9508776883
+-----------------------------------------
+
+visibility 2000 drop 시킨 뒤 > median imputation,
+============================================
