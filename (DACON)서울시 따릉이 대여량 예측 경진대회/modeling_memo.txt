@@ -28,7 +28,7 @@ valid set RMSE : 43.5
  'min_samples_leaf': 1,
  'max_depth': 56,
  'bootstrap': True}
- 
+
 train set RMSE : 39.43
 valid set RMSE : 43.55
 dacon score : 44.9508776883
@@ -36,3 +36,17 @@ dacon score : 44.9508776883
 
 visibility 2000 drop 시킨 뒤 > median imputation,
 ============================================
+#random search cv, random forest
+{'n_estimators': 2000,
+ 'min_samples_split': 2,
+ 'min_samples_leaf': 1,
+ 'max_depth': 12,
+ 'bootstrap': True}
+
+train set RMSE : 42.12
+valid set RMSE : 46.19
+-------------------------------------------
+
+
+visibility 2000 <-- median으로 대체, random forest
+================================================
