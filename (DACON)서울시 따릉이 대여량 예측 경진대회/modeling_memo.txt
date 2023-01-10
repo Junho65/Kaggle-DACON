@@ -1,6 +1,8 @@
 
-
-
+ozone : skewed to the right
+pm10 : skewed to the right
+humidity : normally distributed
+temperature : normally distributed
 windspeed : skewed to the right
 visibility : 이상하게 오른쪽 꼬리쪽에 집중적으로 분포
 --> visibility를 구간화
@@ -50,3 +52,12 @@ valid set RMSE : 46.19
 
 visibility 2000 <-- median으로 대체, random forest
 ================================================
+
+
+------------------------------------------------
+
+KNN imputation, random forest
+
+
+
+median imputation, LGBM
