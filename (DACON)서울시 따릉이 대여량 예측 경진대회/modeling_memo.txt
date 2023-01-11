@@ -50,11 +50,28 @@ valid set RMSE : 46.19
 -------------------------------------------
 
 
-visibility 2000 <-- median으로 대체, random forest
+binning visibility, random forest
 ================================================
+train set RMSE : 39.25
+valid set RMSE : 46.02
 
-
+train set RMSE : 39.51
+valid set RMSE : 45.07
 ------------------------------------------------
+
+without pm, random forest
+=============================================
+train set RMSE : 40.51
+valid set RMSE : 45.77
+
+#optimized
+train set RMSE : 40.18
+valid set RMSE : 45.3
+dacon score : 43.88
+----------------------------------------------
+
+
+
 
 KNN imputation, random forest
 
