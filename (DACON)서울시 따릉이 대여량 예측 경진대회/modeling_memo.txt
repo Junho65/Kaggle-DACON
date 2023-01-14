@@ -70,6 +70,14 @@ valid set RMSE : 45.3
 dacon score : 43.88
 ----------------------------------------------
 
+without pm,precip random forest
+=============================================
+train set RMSE : 40.91
+valid set RMSE : 46.65
+
+train set RMSE : 40.71
+valid set RMSE : 45.42
+----------------------------------------------
 
 
 
