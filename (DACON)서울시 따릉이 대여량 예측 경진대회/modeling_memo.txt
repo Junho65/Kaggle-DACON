@@ -68,6 +68,15 @@ valid set RMSE : 45.77
 train set RMSE : 40.18
 valid set RMSE : 45.3
 dacon score : 43.88
+
+scoring='neg_mean_squared_error'
+train set RMSE : 40.02
+valid set RMSE : 45.45
+dacon score : 43.87
+
+n_estimators range 4000, scoring = 'neg_root_mean_squared_error'
+train set RMSE : 40.19
+valid set RMSE : 45.29
 ----------------------------------------------
 
 without pm,precip random forest
